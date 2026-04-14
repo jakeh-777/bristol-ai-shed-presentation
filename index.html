@@ -242,6 +242,16 @@
       color: #2a201780;
     }
 
+    .shed-logo {
+      position: fixed;
+      top: 24px;
+      right: 32px;
+      height: 48px;
+      width: auto;
+      z-index: 50;
+      opacity: 0.7;
+    }
+
     .founders-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -294,6 +304,8 @@
   </style>
 </head>
 <body>
+
+  <img src="images/logo.svg" alt="Bristol AI Shed" class="shed-logo" id="shed-logo">
 
   <div class="deck" id="deck">
 
@@ -394,8 +406,7 @@
         <div style="margin-top: 32px;">
           <div class="rule"><span class="rule-number">1.</span> Curiosity first - ask questions!</div>
           <div class="rule"><span class="rule-number">2.</span> Share what you're doing.</div>
-          <div class="rule"><span class="rule-number">3.</span> No showing off, no selling.</div>
-          <div class="rule"><span class="rule-number">4.</span> We're all beginners, act accordingly.</div>
+          <div class="rule"><span class="rule-number">3.</span> We're all beginners, act accordingly.</div>
         </div>
       </div>
     </div>
@@ -569,6 +580,7 @@
     var slides = document.querySelectorAll('.slide');
     var progress = document.getElementById('progress');
     var counter = document.getElementById('counter');
+    var shedLogo = document.getElementById('shed-logo');
 
     function go(n) {
       if (n < 0) n = 0;
@@ -578,6 +590,9 @@
       slides[current].classList.add('active');
       progress.style.width = (current / (slides.length - 1)) * 100 + '%';
       counter.textContent = (current + 1) + ' / ' + slides.length;
+      // Hide shed logo on MindsetOS slide (has its own branding)
+      var isMindsetSlide = slides[current].querySelector('[alt="MindsetOS"]');
+      shedLogo.style.display = isMindsetSlide ? 'none' : 'block';
     }
 
     function next() { go(current + 1); }

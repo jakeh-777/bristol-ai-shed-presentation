@@ -1,0 +1,29 @@
+<svg width="240" height="200" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shed outline made of small data dots/dashes -->
+
+  <!-- Roof left slope -->
+  <line x1="120" y1="12" x2="22" y2="82" stroke="#92400e" stroke-width="8" stroke-dasharray="2 4" stroke-linecap="round"/>
+  <!-- Roof right slope -->
+  <line x1="120" y1="12" x2="218" y2="82" stroke="#92400e" stroke-width="8" stroke-dasharray="2 4" stroke-linecap="round"/>
+
+  <!-- Left wall -->
+  <line x1="28" y1="82" x2="28" y2="184" stroke="#92400e" stroke-width="8" stroke-dasharray="2 4" stroke-linecap="round"/>
+  <!-- Right wall -->
+  <line x1="212" y1="82" x2="212" y2="184" stroke="#92400e" stroke-width="8" stroke-dasharray="2 4" stroke-linecap="round"/>
+  <!-- Floor -->
+  <line x1="22" y1="184" x2="218" y2="184" stroke="#92400e" stroke-width="8" stroke-dasharray="2 4" stroke-linecap="round"/>
+
+  <!-- Door -->
+  <line x1="92" y1="120" x2="148" y2="120" stroke="#92400e" stroke-width="6" stroke-dasharray="2 4" stroke-linecap="round"/>
+  <line x1="92" y1="120" x2="92" y2="184" stroke="#92400e" stroke-width="6" stroke-dasharray="2 4" stroke-linecap="round"/>
+  <line x1="148" y1="120" x2="148" y2="184" stroke="#92400e" stroke-width="6" stroke-dasharray="2 4" stroke-linecap="round"/>
+
+  <!-- Corner nodes -->
+  <circle cx="120" cy="12" r="5" fill="#92400e"/>
+  <circle cx="22" cy="82" r="4" fill="#92400e"/>
+  <circle cx="218" cy="82" r="4" fill="#92400e"/>
+  <circle cx="22" cy="184" r="4" fill="#92400e"/>
+  <circle cx="218" cy="184" r="4" fill="#92400e"/>
+  <circle cx="92" cy="120" r="3" fill="#92400e"/>
+  <circle cx="148" cy="120" r="3" fill="#92400e"/>
+</svg>
