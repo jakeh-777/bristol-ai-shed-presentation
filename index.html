@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Bristol AI Shed - Launch Event</title>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Urbanist', system-ui, -apple-system, sans-serif;
+      background: #faf8f5;
+      color: #2a2017;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .deck {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      padding: 60px 80px;
+    }
+
+    .slide.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .progress {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: #b45309;
+      transition: width 0.4s ease;
+      z-index: 100;
+    }
+
+    .slide-counter {
+      position: fixed;
+      bottom: 16px;
+      right: 24px;
+      font-size: 13px;
+      color: #2a201780;
+      z-index: 100;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .slide-inner {
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: #2a2017;
+    }
+
+    h2 {
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      color: #2a2017;
+      margin-bottom: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #2a201799;
+    }
+
+    .accent { color: #b45309; }
+
+    .subtitle {
+      font-size: 22px;
+      font-weight: 300;
+      color: #2a2017b3;
+    }
+
+    .label {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #b45309;
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #2a20170d;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .rule {
+      font-size: 24px;
+      font-weight: 600;
+      color: #2a2017;
+      padding: 12px 0;
+      border-bottom: 1px solid #2a20170a;
+    }
+
+    .rule:last-child { border-bottom: none; }
+
+    .rule-number {
+      color: #b45309;
+      font-weight: 700;
+      margin-right: 12px;
+    }
+
+    .agenda-item {
+      display: flex;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid #2a20170a;
+    }
+
+    .agenda-item:last-child { border-bottom: none; }
+
+    .agenda-time {
+      font-size: 14px;
+      font-weight: 700;
+      color: #b45309;
+      min-width: 50px;
+      padding-top: 2px;
+    }
+
+    .agenda-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2a2017;
+    }
+
+    .agenda-desc {
+      font-size: 15px;
+      color: #2a201780;
+      margin-top: 4px;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .step-card {
+      background: #2a2017;
+      border-radius: 16px;
+      padding: 28px;
+      color: #fff;
+    }
+
+    .step-card h3 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .step-card p {
+      color: rgba(255,255,255,0.7);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .step-num {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 12px;
+    }
+
+    .panel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+
+    .panelist-card {
+      background: #fff;
+      border: 1px solid #2a20170d;
+      border-radius: 16px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .panelist-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      border: 2px solid #2a20170d;
+    }
+
+    .panelist-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #2a2017;
+    }
+
+    .panelist-role {
+      font-size: 14px;
+      color: #2a201780;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    .demo-cue {
+      font-size: 32px;
+      font-weight: 300;
+      color: #2a201780;
+    }
+
+    .founders-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .founder-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .founder-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid #2a20170d;
+    }
+
+    .founder-name {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2a2017;
+      margin-bottom: 4px;
+    }
+
+    .founder-role {
+      font-size: 14px;
+      color: #b45309;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .founder-bio {
+      font-size: 15px;
+      color: #2a201780;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 768px) {
+      .slide { padding: 40px 24px; }
+      h1 { font-size: 36px; }
+      h2 { font-size: 28px; }
+      .steps-grid, .panel-grid, .founders-grid { grid-template-columns: 1fr; }
+      .rule { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="deck" id="deck">
+
+    <!-- Slide 1: Welcome -->
+    <div class="slide active" style="text-align: center;">
+      <div class="slide-inner" style="display: flex; flex-direction: column; align-items: center;">
+        <svg width="80" viewBox="0 0 100 90" fill="none" stroke="#b45309" stroke-width="1.3" stroke-linecap="round" style="margin-bottom: 24px;">
+          <path d="M10 45 L50 15 L90 45" />
+          <path d="M15 45 L15 85 L85 85 L85 45" />
+          <rect x="38" y="55" width="24" height="30" rx="1" />
+          <circle cx="57" cy="72" r="2" fill="#b45309" />
+          <circle cx="30" cy="30" r="2.5" fill="#b45309" />
+          <circle cx="50" cy="15" r="2.5" fill="#b45309" />
+          <circle cx="70" cy="30" r="2.5" fill="#b45309" />
+          <path d="M30 30 L20 30 L20 45" />
+          <path d="M70 30 L80 30 L80 45" />
+        </svg>
+        <h1>Welcome to the<br><span class="accent">Bristol AI Shed</span></h1>
+        <p class="subtitle" style="margin-top: 16px;">AI in Practice: What's Working for Businesses Today</p>
+        <p style="margin-top: 32px; font-size: 16px;">Wednesday 14 May 2026</p>
+      </div>
+    </div>
+
+    <!-- Slide 2: Why the Shed -->
+    <div class="slide">
+      <div class="slide-inner" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <!-- Stephen to add Original Voice screenshot showing how we chose the name -->
+        <div class="label">The name</div>
+        <h2>Why <span class="accent">Shed</span>?</h2>
+        <p style="max-width: 600px;">Placeholder for Stephen's Original Voice screenshot.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3: Agenda -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Agenda</div>
+        <h2>Today's plan</h2>
+        <div class="agenda-item">
+          <div class="agenda-time">8:30</div>
+          <div>
+            <div class="agenda-title">Doors Open</div>
+            <div class="agenda-desc">Coffee, breakfast, settle in</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">9:00</div>
+          <div>
+            <div class="agenda-title">Welcome <span style="font-size: 12px; font-weight: 600; color: #b45309; background: #b453091a; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle;">&larr; We are here &#x1F60A;</span></div>
+            <div class="agenda-desc">Jake and Stephen introduce the community</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">9:30</div>
+          <div>
+            <div class="agenda-title">Panel: AI in Practice</div>
+            <div class="agenda-desc">Three experts on AI in business today</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">10:15</div>
+          <div>
+            <div class="agenda-title">The Shed + Networking</div>
+            <div class="agenda-desc">Two groups: beginners and builders</div>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">11:15</div>
+          <div>
+            <div class="agenda-title">Community Commitment</div>
+            <div class="agenda-desc">Lock in your takeaway</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Rules -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">House Rules</div>
+        <h2>How we do things here</h2>
+        <svg width="60" viewBox="0 0 80 120" fill="none" stroke="#b45309" stroke-width="1.3" stroke-linecap="round" style="position: absolute; top: 0; right: 0; opacity: 0.2;">
+          <path d="M40 10 Q15 10 12 40 Q10 60 28 72 L28 85" />
+          <path d="M40 10 Q65 10 68 40 Q70 60 52 72 L52 85" />
+          <path d="M28 85 L52 85" />
+          <path d="M30 90 L50 90" />
+          <path d="M32 95 L48 95" />
+          <path d="M36 95 L36 100 L44 100 L44 95" />
+          <path d="M35 78 L35 55 L40 45 L45 55 L45 78" />
+          <circle cx="40" cy="45" r="2.5" fill="#b45309" />
+          <circle cx="35" cy="55" r="2" fill="#b45309" />
+          <circle cx="45" cy="55" r="2" fill="#b45309" />
+          <path d="M35 55 L25 45" />
+          <path d="M45 55 L55 45" />
+          <circle cx="25" cy="45" r="2" fill="#b45309" />
+          <circle cx="55" cy="45" r="2" fill="#b45309" />
+        </svg>
+        <div style="margin-top: 32px;">
+          <div class="rule"><span class="rule-number">1.</span> Curiosity first - ask questions!</div>
+          <div class="rule"><span class="rule-number">2.</span> Share what you're doing.</div>
+          <div class="rule"><span class="rule-number">3.</span> No showing off, no selling.</div>
+          <div class="rule"><span class="rule-number">4.</span> We're all beginners, act accordingly.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Your hosts -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Your hosts</div>
+        <h2>Who are we?</h2>
+        <div class="founders-grid">
+          <div class="founder-card">
+            <img src="images/jake-profile.png" alt="Jake Hewlett" class="founder-avatar">
+            <div>
+              <div class="founder-name">Jake Hewlett</div>
+              <div class="founder-role">CEO, MindsetOS</div>
+              <div class="founder-bio">Ex-Google. Building an AI-powered mindset coaching platform. Based in Bristol for 5 years.</div>
+            </div>
+          </div>
+          <div class="founder-card">
+            <img src="images/Stephen.jpeg" alt="Stephen Honight" class="founder-avatar">
+            <div>
+              <div class="founder-name">Stephen Honight</div>
+              <div class="founder-role">CEO, LMo7</div>
+              <div class="founder-bio">CPG background (ex-Mars, LEGO, Unilever). Guest university lecturer. Based in Bristol for 13 years.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: MindsetOS mission -->
+    <div class="slide" style="padding: 0;">
+      <div style="position: absolute; inset: 0; background-image: url('images/lake.webp'); background-size: cover; background-position: center;"></div>
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 100%);"></div>
+      <img src="images/logo-dark.png" alt="MindsetOS" style="position: absolute; top: 40px; right: 48px; height: 72px; width: auto; z-index: 10;">
+      <div class="slide-inner" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2;">
+        <h2 style="font-size: 52px; color: #fff; max-width: 800px;">Your personalised mindset coach,<br>for healthier high performance.</h2>
+        <div style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 1px; margin-top: 32px; margin-bottom: 16px;">THE MINDSETOS<sup style="font-size: 7px; vertical-align: super; letter-spacing: 0;">&trade;</sup> FRAMEWORK</div>
+        <div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/surviving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Surviving</div></div>
+          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/striving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Striving</div></div>
+          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/driving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Driving</div></div>
+          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/exploring.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Exploring</div></div>
+          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/thriving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Thriving</div></div>
+          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/inspiring.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Inspiring</div></div>
+          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/flowing.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Flowing</div></div>
+        </div>
+        <p style="margin-top: 48px; font-size: 16px; color: rgba(255,255,255,0.5); font-weight: 500;">Let me show you...</p>
+      </div>
+    </div>
+
+    <!-- Slide 7: LMo7 -->
+    <div class="slide">
+      <div class="slide-inner">
+        <!-- Stephen to customise this slide -->
+        <div class="label">Outside the Shed</div>
+        <h2>LMo7</h2>
+        <p>Stephen will introduce LMo7 here.</p>
+      </div>
+    </div>
+
+    <!-- Slide 9: Panel intro -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Up next</div>
+        <h2>AI in Practice</h2>
+        <p class="subtitle" style="margin-bottom: 32px;">Three experts, different perspectives, one question: what's actually working?</p>
+        <div class="panel-grid">
+          <div class="panelist-card">
+            <img src="images/Ciaran.jpeg" alt="Ciaran Ellis" class="panelist-avatar">
+            <div class="panelist-name">Ciaran Ellis</div>
+            <div class="panelist-role">Data Science & AI Business Lead, Lloyds Banking Group</div>
+          </div>
+          <div class="panelist-card">
+            <img src="images/Boss.jpeg" alt="Boss Tantanarungsee" class="panelist-avatar">
+            <div class="panelist-name">Boss Tantanarungsee</div>
+            <div class="panelist-role">CEO & Co-founder, Vero Financial</div>
+          </div>
+          <div class="panelist-card">
+            <img src="images/Adele.jpeg" alt="Adele Fox" class="panelist-avatar">
+            <div class="panelist-name">Adele Fox</div>
+            <div class="panelist-role">Senior Lecturer for Marketing, UWE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide: The Shed + Networking -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">The Shed</div>
+        <h2>Time to build.</h2>
+        <p style="margin-bottom: 32px;">Find someone with a different colour. Three questions, three rounds, 20 minutes each.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 32px; margin-bottom: 12px;">1</div>
+            <h3 style="margin-bottom: 8px;">How are you using AI today, if at all?</h3>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 32px; margin-bottom: 12px;">2</div>
+            <h3 style="margin-bottom: 8px;">Do you have a tip you can share?</h3>
+          </div>
+          <div class="card" style="text-align: center;">
+            <div style="font-size: 32px; margin-bottom: 12px;">3</div>
+            <h3 style="margin-bottom: 8px;">What could we try and figure out right now?</h3>
+          </div>
+        </div>
+        <div style="margin-top: 24px; display: flex; gap: 12px; align-items: center;">
+          <div style="width: 16px; height: 16px; border-radius: 50%; background: #ef4444;"></div>
+          <div style="width: 16px; height: 16px; border-radius: 50%; background: #3b82f6;"></div>
+          <div style="width: 16px; height: 16px; border-radius: 50%; background: #22c55e;"></div>
+          <div style="width: 16px; height: 16px; border-radius: 50%; background: #eab308;"></div>
+          <p style="font-size: 14px; color: #2a201760; margin: 0;">Different colour each round. Meet someone new.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide: Community Commitment -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Before you go</div>
+        <h2>Community Commitment</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start;">
+          <div>
+            <div class="card" style="margin-bottom: 24px;">
+              <h3 style="margin-bottom: 8px;">The Workbench Newsletter</h3>
+              <p style="font-size: 16px;">We want to build a newsletter that actually helps this community stay up to date with relevant AI news, tips and info. We'd love volunteers to help lead it. Nominate yourself in the feedback form, and tell us what type of AI content would be most useful to you.</p>
+            </div>
+
+            <div style="margin-top: 8px;">
+              <div class="label" style="margin-bottom: 12px;">Our ask</div>
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="font-size: 20px; line-height: 1;">&#x1F4F1;</span>
+                  <p style="font-size: 16px; margin: 0;">Liked it? Share this event on LinkedIn.</p>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="font-size: 20px; line-height: 1;">&#x1F4DD;</span>
+                  <p style="font-size: 16px; margin: 0;">Fill in the feedback form. Tell us how to make the next one better.</p>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                  <span style="font-size: 20px; line-height: 1;">&#x1F6E0;</span>
+                  <p style="font-size: 16px; margin: 0;">Try something you learnt today. Let us know how it went on the Bristol AI Shed LinkedIn page.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <img src="images/feedback-qr.png" alt="Feedback form QR code" style="width: 160px; height: 160px; border-radius: 8px;">
+            <p style="font-size: 13px; color: #2a201760; margin-top: 8px;">Scan for feedback form</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="progress" id="progress"></div>
+  <div class="slide-counter" id="counter"></div>
+
+  <script>
+    var current = 0;
+    var slides = document.querySelectorAll('.slide');
+    var progress = document.getElementById('progress');
+    var counter = document.getElementById('counter');
+
+    function go(n) {
+      if (n < 0) n = 0;
+      if (n > slides.length - 1) n = slides.length - 1;
+      slides[current].classList.remove('active');
+      current = n;
+      slides[current].classList.add('active');
+      progress.style.width = (current / (slides.length - 1)) * 100 + '%';
+      counter.textContent = (current + 1) + ' / ' + slides.length;
+    }
+
+    function next() { go(current + 1); }
+    function prev() { go(current - 1); }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        next();
+      }
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prev();
+      }
+    });
+
+    var touchStartX = 0;
+    document.addEventListener('touchstart', function(e) {
+      touchStartX = e.touches[0].clientX;
+    });
+    document.addEventListener('touchend', function(e) {
+      var delta = touchStartX - e.changedTouches[0].clientX;
+      if (delta > 50) next();
+      if (delta < -50) prev();
+    });
+
+    go(0);
+  </script>
+
+</body>
+</html>
