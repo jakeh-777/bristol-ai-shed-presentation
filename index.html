@@ -69,7 +69,7 @@
     }
 
     h1 {
-      font-size: 56px;
+      font-size: 72px;
       font-weight: 700;
       line-height: 1.1;
       letter-spacing: -1.5px;
@@ -77,7 +77,7 @@
     }
 
     h2 {
-      font-size: 42px;
+      font-size: 56px;
       font-weight: 700;
       line-height: 1.15;
       letter-spacing: -1px;
@@ -86,12 +86,12 @@
     }
 
     h3 {
-      font-size: 20px;
+      font-size: 26px;
       font-weight: 600;
     }
 
     p {
-      font-size: 18px;
+      font-size: 22px;
       line-height: 1.6;
       color: #2a201799;
     }
@@ -99,13 +99,13 @@
     .accent { color: #b45309; }
 
     .subtitle {
-      font-size: 22px;
+      font-size: 28px;
       font-weight: 300;
       color: #2a2017b3;
     }
 
     .label {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -122,7 +122,7 @@
     }
 
     .rule {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 600;
       color: #2a2017;
       padding: 12px 0;
@@ -147,21 +147,21 @@
     .agenda-item:last-child { border-bottom: none; }
 
     .agenda-time {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 700;
       color: #b45309;
-      min-width: 50px;
+      min-width: 60px;
       padding-top: 2px;
     }
 
     .agenda-title {
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 600;
       color: #2a2017;
     }
 
     .agenda-desc {
-      font-size: 15px;
+      font-size: 18px;
       color: #2a201780;
       margin-top: 4px;
     }
@@ -181,18 +181,18 @@
 
     .step-card h3 {
       color: #fff;
-      font-size: 24px;
+      font-size: 30px;
       margin-bottom: 8px;
     }
 
     .step-card p {
       color: rgba(255,255,255,0.7);
-      font-size: 15px;
+      font-size: 19px;
       line-height: 1.5;
     }
 
     .step-num {
-      font-size: 13px;
+      font-size: 15px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -224,20 +224,20 @@
     }
 
     .panelist-name {
-      font-size: 18px;
+      font-size: 24px;
       font-weight: 700;
       color: #2a2017;
     }
 
     .panelist-role {
-      font-size: 14px;
+      font-size: 17px;
       color: #2a201780;
       margin-top: 4px;
       line-height: 1.4;
     }
 
     .demo-cue {
-      font-size: 32px;
+      font-size: 42px;
       font-weight: 300;
       color: #2a201780;
     }
@@ -250,6 +250,49 @@
       width: auto;
       z-index: 50;
       opacity: 0.7;
+    }
+
+    .sponsor-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-top: 32px;
+    }
+
+    .sponsor-card {
+      background: #fff;
+      border: 1px solid #2a20170d;
+      border-radius: 16px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+
+    .sponsor-logo {
+      height: 72px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      margin-bottom: 24px;
+    }
+
+    .sponsor-tag {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #b45309;
+      margin-bottom: 12px;
+    }
+
+    .sponsor-quote {
+      font-size: 22px;
+      font-style: italic;
+      color: #2a2017cc;
+      line-height: 1.4;
     }
 
     .founders-grid {
@@ -275,32 +318,307 @@
     }
 
     .founder-name {
-      font-size: 20px;
+      font-size: 26px;
       font-weight: 700;
       color: #2a2017;
       margin-bottom: 4px;
     }
 
     .founder-role {
-      font-size: 14px;
+      font-size: 17px;
       color: #b45309;
       font-weight: 600;
       margin-bottom: 8px;
     }
 
     .founder-bio {
-      font-size: 15px;
+      font-size: 18px;
       color: #2a201780;
       line-height: 1.5;
     }
 
+    .plain-points {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .plain-point {
+      font-size: 30px;
+      font-weight: 600;
+      color: #2a2017;
+      line-height: 1.35;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #2a20170a;
+    }
+
+    .plain-point:last-child { border-bottom: none; }
+
+    .small-note {
+      font-size: 17px;
+      color: #2a201760;
+      margin-top: 28px;
+    }
+
+    .case-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .case-item {
+      background: #fff;
+      border: 1px solid #2a20170d;
+      border-radius: 12px;
+      padding: 20px 24px;
+    }
+
+    .case-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #2a2017;
+      margin-bottom: 6px;
+    }
+
+    .case-copy {
+      font-size: 21px;
+      color: #2a201799;
+      line-height: 1.45;
+    }
+
     @media (max-width: 768px) {
       .slide { padding: 40px 24px; }
-      h1 { font-size: 36px; }
-      h2 { font-size: 28px; }
+      h1 { font-size: 44px; }
+      h2 { font-size: 34px; }
       .steps-grid, .panel-grid, .founders-grid { grid-template-columns: 1fr; }
-      .rule { font-size: 20px; }
+      .rule { font-size: 24px; }
+      .plain-point { font-size: 24px; }
     }
+
+    /* Chart slides */
+    .chart-row {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 36px;
+      align-items: center;
+      margin-top: 24px;
+    }
+    .line-chart { width: 100%; height: auto; display: block; }
+    .callout-card {
+      background: #fff;
+      border: 1px solid #2a20170d;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .callout-stat {
+      font-size: 56px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 0.95;
+      color: #b45309;
+      margin-bottom: 12px;
+    }
+    .callout-text {
+      font-size: 20px;
+      color: #2a2017b3;
+      line-height: 1.45;
+    }
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .bar-row {
+      display: grid;
+      grid-template-columns: 130px 1fr 80px 130px;
+      align-items: center;
+      gap: 14px;
+      font-size: 20px;
+    }
+    .bar-label { font-weight: 600; color: #2a2017; }
+    .bar-track {
+      height: 22px;
+      background: #2a20170d;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: #b45309;
+      border-radius: 4px;
+    }
+    .bar-fill.muted { background: #b4530966; }
+    .bar-value {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: #2a2017;
+      text-align: right;
+    }
+    .bar-change { font-size: 14px; color: #2a201780; font-weight: 600; }
+    .bar-change.up { color: #15803d; }
+    .bar-change.down { color: #c1352d; }
+    .hero-stat-block { text-align: center; padding: 12px 0 8px; }
+    .hero-stat {
+      font-size: 132px;
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 0.9;
+      color: #b45309;
+    }
+    .hero-stat-sub {
+      font-size: 24px;
+      color: #2a2017b3;
+      margin-top: 12px;
+    }
+    .stat-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid #2a20170d;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-card-num {
+      font-size: 44px;
+      font-weight: 700;
+      color: #b45309;
+      margin-bottom: 6px;
+      letter-spacing: -0.02em;
+    }
+    .stat-card-label {
+      font-size: 17px;
+      color: #2a2017b3;
+      line-height: 1.4;
+    }
+    .source-line {
+      font-size: 14px;
+      color: #2a201760;
+      margin-top: 28px;
+      letter-spacing: 0.02em;
+    }
+    .chart-caveat {
+      font-size: 16px;
+      color: #2a201780;
+      margin-top: 16px;
+      font-style: italic;
+    }
+
+    /* Networking timer (embedded as a slide) */
+    .timer-app {
+      --nw-red: #c1352d;
+      --nw-yellow: #eab308;
+      --nw-green: #15803d;
+      --nw-blue: #1d4ed8;
+      --nw-rule: #2a201720;
+      width: 100%;
+      max-width: 1400px;
+    }
+    .timer-app section { display: none; width: 100%; }
+    .timer-app section.is-active { display: block; }
+
+    .timer-app #nw-start { text-align: center; }
+    .timer-app #nw-start h1 {
+      font-size: 80px;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin: 0 0 36px;
+    }
+    .timer-app #nw-start h1 .accent { color: #b45309; }
+    .timer-app #nw-start ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px;
+      font-size: 28px;
+      font-weight: 400;
+      color: #2a201799;
+    }
+    .timer-app #nw-start ul li { margin: 10px 0; }
+    .timer-app #nw-start .hint {
+      font-size: 14px;
+      color: #2a201780;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .timer-app .nw-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #2a201799;
+      margin-bottom: 36px;
+    }
+    .timer-app .nw-timer {
+      font-size: 84px;
+      font-weight: 700;
+      color: #2a2017;
+      letter-spacing: -0.02em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .timer-app .nw-pairs { display: flex; flex-direction: column; gap: 24px; margin-bottom: 36px; }
+    .timer-app .nw-pair { display: flex; align-items: center; justify-content: center; gap: 28px; }
+    .timer-app .nw-block {
+      flex: 1;
+      max-width: 380px;
+      padding: 36px 12px;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      border-radius: 12px;
+      letter-spacing: 0.08em;
+      color: #fff;
+    }
+    .timer-app .nw-vs { font-size: 40px; color: #2a201766; font-weight: 300; }
+
+    .timer-app .nw-divider { border: 0; border-top: 1px solid var(--nw-rule); margin: 28px 0; }
+
+    .timer-app .nw-questions { list-style: none; padding: 0; font-size: 28px; line-height: 1.45; font-weight: 500; }
+    .timer-app .nw-questions li {
+      margin: 16px 0;
+      padding-left: 36px;
+      position: relative;
+    }
+    .timer-app .nw-questions li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 18px;
+      width: 22px;
+      height: 2px;
+      background: #b45309;
+    }
+
+    .timer-app .nw-up-next {
+      font-size: 20px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #b45309;
+      font-weight: 700;
+    }
+    .timer-app .nw-cta { text-align: center; margin-top: 36px; font-size: 14px; color: #2a201780; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .timer-app #nw-done { text-align: center; }
+    .timer-app #nw-done .nw-done-headline {
+      font-size: 80px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 0 0 12px;
+    }
+    .timer-app #nw-done .nw-done-sub { font-size: 28px; color: #2a201799; margin: 0; }
   </style>
 </head>
 <body>
@@ -325,21 +643,11 @@
         </svg>
         <h1>Welcome to the<br><span class="accent">Bristol AI Shed</span></h1>
         <p class="subtitle" style="margin-top: 16px;">AI in Practice: What's Working for Businesses Today</p>
-        <p style="margin-top: 32px; font-size: 16px;">Thursday 14 May 2026</p>
+        <p style="margin-top: 32px; font-size: 22px;">Thursday 14 May 2026</p>
       </div>
     </div>
 
-    <!-- Slide 2: Why the Shed -->
-    <div class="slide">
-      <div class="slide-inner" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
-        <!-- Stephen to add Original Voice screenshot showing how we chose the name -->
-        <div class="label">The name</div>
-        <h2>Why <span class="accent">Shed</span>?</h2>
-        <p style="max-width: 600px;">Placeholder for Stephen's Original Voice screenshot.</p>
-      </div>
-    </div>
-
-    <!-- Slide 3: Rules -->
+    <!-- Slide 2: Rules -->
     <div class="slide">
       <div class="slide-inner">
         <div class="label">House Rules</div>
@@ -368,7 +676,62 @@
       </div>
     </div>
 
-    <!-- Slide 4: Agenda -->
+    <!-- Slide 3: Why the Shed -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">How we named it</div>
+        <h2>Why <span class="accent">Shed?</span></h2>
+        <p class="subtitle" style="margin-bottom: 36px;">We asked 75 synthetic respondents three times. They told us.</p>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-num">Round 01</div>
+            <h3>Three-way test</h3>
+            <p style="margin-top: 12px; font-size: 22px;">AI Collective <strong style="color: #fff;">92%</strong><br>AI Shed <strong style="color: #fff;">8%</strong><br>AI Garden <strong style="color: #fff;">0%</strong></p>
+            <p style="font-size: 16px; color: rgba(255,255,255,0.65); margin-top: 14px;">Garden eliminated.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">Round 02</div>
+            <h3>Add "Bristol" to Shed</h3>
+            <p style="margin-top: 12px; font-size: 22px;">Bristol AI Shed <strong style="color: #fff;">60%</strong><br>AI Collective <strong style="color: #fff;">40%</strong></p>
+            <p style="font-size: 16px; color: rgba(255,255,255,0.65); margin-top: 14px;">7.5× lift. The place beats the abstract.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">Round 03</div>
+            <h3>Final head-to-head</h3>
+            <p style="margin-top: 12px; font-size: 22px;">Bristol AI Shed <strong style="color: #fff;">100%</strong><br>AI Garden <strong style="color: #fff;">0%</strong></p>
+            <p style="font-size: 16px; color: rgba(255,255,255,0.65); margin-top: 14px;">Unanimous winner.</p>
+          </div>
+        </div>
+        <div style="margin-top: 32px; padding: 20px 24px; border-left: 3px solid #b45309; background: #fff; border-radius: 4px;">
+          <p style="font-style: italic; color: #2a2017; font-size: 30px; line-height: 1.4;">"I would scroll right past the Collective, but I would stop and look at the Shed."</p>
+          <p style="font-size: 17px; color: #2a201780; margin-top: 12px;">Digital Twin respondent, Round 2</p>
+        </div>
+        <p style="font-size: 14px; color: #2a201766; margin-top: 16px; text-align: right; letter-spacing: 0.5px;">75 synthetic respondents &nbsp;·&nbsp; 3 rounds &nbsp;·&nbsp; OriginalVoices Digital Twins &nbsp;·&nbsp; Bristol marketing pros, 25–50</p>
+      </div>
+    </div>
+
+    <!-- Slide 4: Thank you to our sponsors -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Founding Gold Sponsors</div>
+        <h2>Thank you to <span class="accent">our sponsors</span></h2>
+        <p class="subtitle" style="margin-bottom: 8px;">They fund the events. That's what keeps them free.</p>
+        <div class="sponsor-grid">
+          <div class="sponsor-card">
+            <img class="sponsor-logo" src="images/albert-goodman-logo.png" alt="Albert Goodman" />
+            <div class="sponsor-tag">Accountancy & Advisory</div>
+            <p class="sponsor-quote">"Helping businesses prosper for over a century. Proud of our heritage and independence."</p>
+          </div>
+          <div class="sponsor-card">
+            <img class="sponsor-logo" src="images/vwv-logo.png" alt="VWV" />
+            <div class="sponsor-tag">Law</div>
+            <p class="sponsor-quote">"Through our expert team of lawyers and the partnerships we build, we put our clients at the forefront."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 5: Agenda -->
     <div class="slide">
       <div class="slide-inner">
         <div class="label">Agenda</div>
@@ -383,7 +746,7 @@
         <div class="agenda-item">
           <div class="agenda-time">9:00</div>
           <div>
-            <div class="agenda-title">Welcome <span style="font-size: 12px; font-weight: 600; color: #b45309; background: #b453091a; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle;">&larr; We are here &#x1F60A;</span></div>
+            <div class="agenda-title">Welcome <span style="font-size: 14px; font-weight: 600; color: #b45309; background: #b453091a; padding: 4px 10px; border-radius: 4px; margin-left: 8px; vertical-align: middle;">&larr; We are here &#x1F60A;</span></div>
             <div class="agenda-desc">Jake and Stephen introduce the community</div>
           </div>
         </div>
@@ -411,7 +774,7 @@
       </div>
     </div>
 
-    <!-- Slide 5: Your hosts -->
+    <!-- Slide 6: Your hosts -->
     <div class="slide">
       <div class="slide-inner">
         <div class="label">Your hosts</div>
@@ -429,7 +792,7 @@
             <img src="images/Stephen.jpeg" alt="Stephen Honight" class="founder-avatar">
             <div>
               <div class="founder-name">Stephen Honight</div>
-              <div class="founder-role">CEO, LMo7</div>
+              <div class="founder-role">CEO, Lmo7</div>
               <div class="founder-bio">CPG background (ex-Mars, LEGO, Unilever). Guest university lecturer. Based in Bristol for 13 years.</div>
             </div>
           </div>
@@ -437,44 +800,248 @@
       </div>
     </div>
 
-    <!-- Slide 6: MindsetOS mission -->
+    <!-- Slide 7: MindsetOS mission -->
     <div class="slide" style="padding: 0;">
       <div style="position: absolute; inset: 0; background-image: url('images/lake.webp'); background-size: cover; background-position: center;"></div>
       <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.5) 100%);"></div>
       <img src="images/logo-dark.png" alt="MindsetOS" style="position: absolute; top: 40px; right: 48px; height: 72px; width: auto; z-index: 10;">
       <div class="slide-inner" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2;">
         <h2 style="font-size: 52px; color: #fff; max-width: 800px;">Your personalised mindset coach,<br>for healthier high performance.</h2>
-        <div style="font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 1px; margin-top: 32px; margin-bottom: 16px;">THE MINDSETOS<sup style="font-size: 7px; vertical-align: super; letter-spacing: 0;">&trade;</sup> FRAMEWORK</div>
-        <div style="display: flex; gap: 10px; align-items: center; justify-content: center;">
-          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/surviving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Surviving</div></div>
-          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
-          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/striving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Striving</div></div>
-          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
-          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/driving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Driving</div></div>
-          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
-          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/exploring.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Exploring</div></div>
-          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
-          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/thriving.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Thriving</div></div>
-          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
-          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/inspiring.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Inspiring</div></div>
-          <div style="color: rgba(255,255,255,0.15); font-size: 12px;">&#8594;</div>
-          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/flowing.png" style="width: 46px; height: 46px; border-radius: 50%;"><div style="font-size: 10px; text-align: center; color: rgba(255,255,255,0.45); margin-top: 4px;">Flowing</div></div>
+        <div style="font-size: 17px; font-weight: 600; color: rgba(255,255,255,0.7); letter-spacing: 2px; margin-top: 40px; margin-bottom: 24px;">THE MINDSETOS<sup style="font-size: 11px; vertical-align: super; letter-spacing: 0;">&trade;</sup> FRAMEWORK</div>
+        <div style="display: flex; gap: 14px; align-items: center; justify-content: center;">
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/surviving.png" style="width: 84px; height: 84px; border-radius: 50%;"><div style="font-size: 18px; font-weight: 500; text-align: center; color: rgba(255,255,255,0.85); margin-top: 10px;">Surviving</div></div>
+          <div style="color: rgba(255,255,255,0.35); font-size: 22px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/striving.png" style="width: 84px; height: 84px; border-radius: 50%;"><div style="font-size: 18px; font-weight: 500; text-align: center; color: rgba(255,255,255,0.85); margin-top: 10px;">Striving</div></div>
+          <div style="color: rgba(255,255,255,0.35); font-size: 22px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/driving.png" style="width: 84px; height: 84px; border-radius: 50%;"><div style="font-size: 18px; font-weight: 500; text-align: center; color: rgba(255,255,255,0.85); margin-top: 10px;">Driving</div></div>
+          <div style="color: rgba(255,255,255,0.35); font-size: 22px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/exploring.png" style="width: 84px; height: 84px; border-radius: 50%;"><div style="font-size: 18px; font-weight: 500; text-align: center; color: rgba(255,255,255,0.85); margin-top: 10px;">Exploring</div></div>
+          <div style="color: rgba(255,255,255,0.35); font-size: 22px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/thriving.png" style="width: 84px; height: 84px; border-radius: 50%;"><div style="font-size: 18px; font-weight: 500; text-align: center; color: rgba(255,255,255,0.85); margin-top: 10px;">Thriving</div></div>
+          <div style="color: rgba(255,255,255,0.35); font-size: 22px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/inspiring.png" style="width: 84px; height: 84px; border-radius: 50%;"><div style="font-size: 18px; font-weight: 500; text-align: center; color: rgba(255,255,255,0.85); margin-top: 10px;">Inspiring</div></div>
+          <div style="color: rgba(255,255,255,0.35); font-size: 22px;">&#8594;</div>
+          <div style="display: flex; flex-direction: column; align-items: center;"><img src="images/flowing.png" style="width: 84px; height: 84px; border-radius: 50%;"><div style="font-size: 18px; font-weight: 500; text-align: center; color: rgba(255,255,255,0.85); margin-top: 10px;">Flowing</div></div>
         </div>
-        <p style="margin-top: 48px; font-size: 16px; color: rgba(255,255,255,0.5); font-weight: 500;">Let me show you...</p>
+        <p style="margin-top: 48px; font-size: 22px; color: rgba(255,255,255,0.7); font-weight: 500;">Let me show you...</p>
       </div>
     </div>
 
-    <!-- Slide 7: LMo7 -->
+    <!-- Slide 8: Lmo7 -->
     <div class="slide">
       <div class="slide-inner">
-        <!-- Stephen to customise this slide -->
         <div class="label">Outside the Shed</div>
-        <h2>LMo7</h2>
-        <p>Stephen will introduce LMo7 here.</p>
+        <svg viewBox="0 0 1500 350.05" xmlns="http://www.w3.org/2000/svg" style="width: 260px; height: auto; margin-bottom: 28px; display: block;" aria-label="Lmo7"><path fill="#2a2017" d="M994.79,134.58c7.35,12.92,11.03,29.17,11.03,48.78v159.83h-61.77v-155.41c0-13.4-3.43-23.45-10.3-30.15-6.86-6.7-16.51-10.05-28.93-10.05-14.06,0-24.93,4.5-32.6,13.48-7.68,8.99-11.52,21.82-11.52,38.48v143.65h-61.77v-155.41c0-13.4-3.43-23.45-10.3-30.15-6.86-6.7-16.51-10.05-28.93-10.05-14.06,0-24.93,4.5-32.6,13.48-7.68,8.99-11.52,21.82-11.52,38.48v143.65h-61.77V100.01h60.79v20.88c0,3.09,2.51,5.6,5.6,5.6,2,0,3.77-1.1,4.82-2.8,4.32-7,10.82-13.17,19.49-18.52,9.81-6.04,22.71-9.07,38.73-9.07,17.32,0,31.21,3.36,41.67,10.05,9.17,5.88,16.46,13.32,21.86,22.34,1.41,2.36,3.87,3.89,6.61,3.89s5.13-1.49,6.54-3.8c5.36-8.77,12.48-16.17,21.36-22.18,10.13-6.86,24.51-10.3,43.14-10.3,15.03,0,28.68,3.19,40.94,9.56,12.26,6.37,22.06,16.02,29.42,28.93ZM1252.91,0h0v55.89h176.18c3.43,0,6.2,2.78,6.2,6.2,0,1.07-.28,2.12-.81,3.06l-114.41,202.04c-6.54,11.45-10.79,21.66-12.75,30.64-1.96,8.99-2.94,19.85-2.94,32.6v12.75h62.75v-9.81c0-8.5.81-15.69,2.45-21.57,1.63-5.89,4.57-12.58,8.82-20.1l121.58-217.19V0h-247.09ZM1274.48,150.51c11.11,18.63,16.67,41.02,16.67,67.16v7.85c0,26.15-5.56,48.53-16.67,67.16-11.11,18.63-26.31,32.85-45.6,42.65-19.29,9.81-41.02,14.71-65.21,14.71s-45.92-4.91-65.2-14.71c-19.29-9.81-34.49-24.02-45.6-42.65-11.12-18.63-16.67-41.01-16.67-67.16v-7.85c0-26.14,5.55-48.53,16.67-67.16,11.11-18.63,26.3-32.85,45.6-42.65,19.28-9.81,41.01-14.71,65.2-14.71s45.92,4.91,65.21,14.71c19.28,9.81,34.48,24.02,45.6,42.65ZM1229.37,219.15c0-22.88-6.13-40.45-18.38-52.7-12.26-12.26-28.03-18.39-47.31-18.39s-34.65,6.13-47.07,18.39c-12.42,12.25-18.63,29.82-18.63,52.7v4.9c0,22.88,6.21,40.45,18.63,52.7,12.42,12.26,28.11,18.39,47.07,18.39s34.64-6.13,47.07-18.39c12.42-12.26,18.63-29.82,18.63-52.7v-4.9ZM438.31,281.09c0-1.07.28-2.12.81-3.06l114.41-202.04c6.54-11.45,10.79-21.66,12.75-30.64,1.96-8.99,2.94-19.85,2.94-32.6V0h-62.75v9.81c0,8.5-.81,15.69-2.45,21.57-1.63,5.89-4.57,12.58-8.82,20.1l-121.58,217.19v74.52h247.09v-55.89h-176.18c-3.43,0-6.2-2.78-6.2-6.2ZM240.23,192.24l71.6-127.92-68.72.27c-5.32.02-9.65-4.29-9.65-9.61V0H43.6L0,78.03h197.6c7.34,0,11.97,7.9,8.39,14.31l-53.35,95.31c-2.04,3.59-3.42,6.66-4.1,9.13-.32,1.17-.74,3.31-.89,7.17.15,3.47.57,5.6.9,6.79.68,2.46,2.05,5.52,4.06,9.07l69.07,123.38h90.15l-71.63-127.96c-2.16-3.81-2.93-6.02-3.21-7h0c-.1-.37-.43-1.75-.56-4.29.12-2.92.46-4.31.56-4.68.26-.97,1.04-3.16,3.23-7.02Z"/></svg>
+        <h2>AI-Native, <span class="accent">Agentic Commerce</span></h2>
+        <p class="subtitle" style="margin-bottom: 32px;">We help brands show up, get recommended, and convert in AI-mediated commerce: Rufus, ChatGPT shopping, AI Overviews.</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px;">
+          <div>
+            <div class="label" style="margin-bottom: 12px;">Where I've been</div>
+            <p style="color: #2a2017; font-weight: 600; font-size: 26px; line-height: 1.7;">LEGO &nbsp;·&nbsp; Mars &nbsp;·&nbsp; Unilever</p>
+          </div>
+          <div>
+            <div class="label" style="margin-bottom: 12px;">Who we work with now</div>
+            <p style="color: #2a2017; font-weight: 600; font-size: 26px; line-height: 1.7;">Haleon &nbsp;·&nbsp; Brown-Forman &nbsp;·&nbsp; Jack&nbsp;Daniel's &nbsp;·&nbsp; JTI</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Slide 9: Panel intro -->
+    <!-- Slide 8a: AI usage growth chart -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Adoption</div>
+        <h2>AI use has scaled fast</h2>
+        <p class="subtitle" style="margin-bottom: 8px;">ChatGPT weekly users tripled to 900M in 14 months.</p>
+        <div class="chart-row">
+          <svg class="line-chart" viewBox="0 0 800 320" preserveAspectRatio="xMidYMid meet" aria-label="ChatGPT weekly active users over time">
+            <!-- Gridlines -->
+            <line x1="60" y1="40" x2="770" y2="40" stroke="#2a201710" />
+            <line x1="60" y1="100" x2="770" y2="100" stroke="#2a201710" />
+            <line x1="60" y1="160" x2="770" y2="160" stroke="#2a201710" />
+            <line x1="60" y1="220" x2="770" y2="220" stroke="#2a201710" />
+            <line x1="60" y1="280" x2="770" y2="280" stroke="#2a201730" />
+            <!-- Y labels -->
+            <text x="50" y="44" text-anchor="end" fill="#2a201770" font-size="16">1B</text>
+            <text x="50" y="104" text-anchor="end" fill="#2a201770" font-size="16">750M</text>
+            <text x="50" y="164" text-anchor="end" fill="#2a201770" font-size="16">500M</text>
+            <text x="50" y="224" text-anchor="end" fill="#2a201770" font-size="16">250M</text>
+            <text x="50" y="284" text-anchor="end" fill="#2a201770" font-size="16">0</text>
+            <!-- Data line: Dec'24=300M, Feb'25=400M, Mar'25=500M, Aug'25=700M, Sep'25=800M, Feb'26=900M -->
+            <polyline fill="none" stroke="#b45309" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"
+              points="60,208 161,184 211,160 461,112 511,88 770,64" />
+            <!-- Data points -->
+            <circle cx="60" cy="208" r="5" fill="#b45309" />
+            <circle cx="161" cy="184" r="5" fill="#b45309" />
+            <circle cx="211" cy="160" r="5" fill="#b45309" />
+            <circle cx="461" cy="112" r="5" fill="#b45309" />
+            <circle cx="511" cy="88" r="5" fill="#b45309" />
+            <circle cx="770" cy="64" r="6" fill="#b45309" />
+            <!-- Endpoint annotations -->
+            <text x="60" y="196" text-anchor="middle" fill="#2a2017" font-size="18" font-weight="700">300M</text>
+            <text x="770" y="52" text-anchor="end" fill="#b45309" font-size="22" font-weight="800">900M</text>
+            <!-- X-axis labels -->
+            <text x="60" y="305" text-anchor="middle" fill="#2a201780" font-size="16">Dec 2024</text>
+            <text x="770" y="305" text-anchor="end" fill="#2a201780" font-size="16">Feb 2026</text>
+            <!-- Title -->
+            <text x="60" y="22" fill="#2a2017b3" font-size="16" font-weight="600">ChatGPT weekly active users</text>
+          </svg>
+          <div class="callout-card">
+            <div class="callout-stat">56%</div>
+            <div class="callout-text">AI is now <strong>56% the size of Google search</strong> worldwide. 45 billion AI sessions a month, globally.</div>
+          </div>
+        </div>
+        <p class="source-line">Sources: OpenAI / CNBC and Search Engine Land for ChatGPT WAU. Graphite analysis of Similarweb data, Q4 2025.</p>
+      </div>
+    </div>
+
+    <!-- Slide 8b: Popular models -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Tools</div>
+        <h2>Two metrics, two leaders.</h2>
+        <p class="subtitle" style="margin-bottom: 8px;">ChatGPT dominates the web. Anthropic leads on revenue and the Fortune 100.</p>
+        <div class="chart-row">
+          <div class="bar-chart" style="margin-top: 0;">
+            <div class="bar-row">
+              <div class="bar-label">ChatGPT</div>
+              <div class="bar-track"><div class="bar-fill" style="width: 75%;"></div></div>
+              <div class="bar-value">64.6%</div>
+              <div class="bar-change down">&darr; from 86.6%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Gemini</div>
+              <div class="bar-track"><div class="bar-fill" style="width: 25.5%;"></div></div>
+              <div class="bar-value">22.0%</div>
+              <div class="bar-change up">&uarr; from 5.3%</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Grok</div>
+              <div class="bar-track"><div class="bar-fill muted" style="width: 4%;"></div></div>
+              <div class="bar-value">3.5%</div>
+              <div class="bar-change">new entrant</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">DeepSeek</div>
+              <div class="bar-track"><div class="bar-fill muted" style="width: 3.8%;"></div></div>
+              <div class="bar-value">3.3%</div>
+              <div class="bar-change">new entrant</div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Claude</div>
+              <div class="bar-track"><div class="bar-fill muted" style="width: 2.4%;"></div></div>
+              <div class="bar-value">2.1%</div>
+              <div class="bar-change"></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Perplexity</div>
+              <div class="bar-track"><div class="bar-fill muted" style="width: 2.2%;"></div></div>
+              <div class="bar-value">1.9%</div>
+              <div class="bar-change"></div>
+            </div>
+            <div class="bar-row">
+              <div class="bar-label">Copilot</div>
+              <div class="bar-track"><div class="bar-fill muted" style="width: 1.3%;"></div></div>
+              <div class="bar-value">1.1%</div>
+              <div class="bar-change"></div>
+            </div>
+            <p style="font-size: 14px; color: #2a201780; margin: 8px 0 0; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">Web traffic share &middot; Jan 2026</p>
+          </div>
+          <div class="callout-card">
+            <div class="callout-stat">$30B</div>
+            <div class="callout-text">Anthropic just hit <strong>$30B ARR</strong> (April 2026), passing OpenAI's $24B. <strong>70% of the Fortune 100</strong> are Claude customers. Web traffic understates the enterprise picture.</div>
+          </div>
+        </div>
+        <p class="source-line">Sources: Similarweb (web traffic, Jan 2026); Bloomberg, PYMNTS, SaaStr (Anthropic revenue and enterprise penetration, Apr 2026).</p>
+      </div>
+    </div>
+
+    <!-- Slide 8c: AI traffic to retailers -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Commerce</div>
+        <h2>AI shoppers convert better</h2>
+        <p class="subtitle">AI-referred traffic is still a small slice of retail visits, but the visits that do come through convert at higher rates than other sources.</p>
+        <div class="hero-stat-block">
+          <div class="hero-stat">+31%</div>
+          <div class="hero-stat-sub">higher conversion rate for AI-referred shoppers vs other traffic sources</div>
+        </div>
+        <div class="stat-cards">
+          <div class="stat-card">
+            <div class="stat-card-num">+54%</div>
+            <div class="stat-card-label">conversion lift on Thanksgiving for AI-referred visits</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-num">+254%</div>
+            <div class="stat-card-label">growth in revenue per visit from AI-referred shoppers, year over year</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-num">+693%</div>
+            <div class="stat-card-label">growth in AI-driven traffic year over year &middot; off a small 2024 base</div>
+          </div>
+        </div>
+        <p class="chart-caveat">Adobe notes the absolute user base is still modest. The trajectory and the quality both point up.</p>
+        <p class="source-line">Source: Adobe Analytics, 2025 holiday shopping report (January 2026).</p>
+      </div>
+    </div>
+
+    <!-- Slide 9: The rules are changing -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Example</div>
+        <h2>The rules are changing</h2>
+        <p class="subtitle" style="margin-bottom: 28px;">A useful example is hiring.</p>
+        <div class="case-item">
+          <div class="case-title">Anthropic candidate guidance</div>
+          <div class="case-copy">Anthropic says candidates can use Claude to refine applications and prepare for interviews, as long as the work is still honest and personal. They draw the line at live interviews and assessments unless AI is clearly allowed.</div>
+        </div>
+        <div class="plain-points" style="margin-top: 28px;">
+          <div class="plain-point">The question is not simply: did you use AI?</div>
+          <div class="plain-point">It is: did you use it in a sensible, honest way?</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 11: Confidence is uneven (text + data) -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">The gap</div>
+        <h2>Confidence is uneven</h2>
+        <p class="subtitle">Use is everywhere. Permission, training, and trust have not caught up.</p>
+        <div class="stat-cards" style="margin-top: 36px;">
+          <div class="stat-card">
+            <div class="stat-card-num">75%</div>
+            <div class="stat-card-label">of knowledge workers use AI at work, nearly double six months earlier</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-num">79%</div>
+            <div class="stat-card-label">use their own AI tools rather than ones provided by their employer</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-num">50%</div>
+            <div class="stat-card-label">of US workers don't know whether AI is allowed at their job</div>
+          </div>
+        </div>
+        <p class="chart-caveat">The limiting factor is not access to tools. It is confidence, permission, training, and judgement.</p>
+        <p class="source-line">Sources: Microsoft Work Trend Index 2025 (knowledge workers, shadow AI); KPMG Trust, attitudes and use of AI study, 2025 (workplace guidance).</p>
+      </div>
+    </div>
+
+    <!-- Slide 12: Why Bristol AI Shed exists -->
+    <div class="slide">
+      <div class="slide-inner">
+        <div class="label">Why this room exists</div>
+        <h2>Bristol AI Shed is about practical use</h2>
+        <div class="plain-points">
+          <div class="plain-point">Not hype.</div>
+          <div class="plain-point">Not pretending AI fixes everything.</div>
+          <div class="plain-point">A place to try things, ask basic questions, compare notes, and get more confident.</div>
+        </div>
+        <p class="small-note">Most people do not need a lecture on the future of AI. They need a place to ask: what can I actually do with this on Monday morning?</p>
+      </div>
+    </div>
+
+    <!-- Slide 13: Panel intro -->
     <div class="slide">
       <div class="slide-inner">
         <div class="label">Up next</div>
@@ -525,8 +1092,131 @@
           <div style="width: 16px; height: 16px; border-radius: 50%; background: #3b82f6;"></div>
           <div style="width: 16px; height: 16px; border-radius: 50%; background: #22c55e;"></div>
           <div style="width: 16px; height: 16px; border-radius: 50%; background: #eab308;"></div>
-          <p style="font-size: 14px; color: #2a201760; margin: 0;">Different colour each round. Meet someone new.</p>
+          <p style="font-size: 18px; color: #2a201760; margin: 0;">Different colour each round. Meet someone new.</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Slide: Networking Timer -->
+    <div class="slide" id="networking-timer-slide">
+      <div class="timer-app">
+        <section id="nw-start" class="is-active">
+          <h1><span class="accent">The Shed</span>: Networking Hour</h1>
+          <ul>
+            <li>Curiosity first</li>
+            <li>Share what you've built</li>
+            <li>We are all beginners</li>
+          </ul>
+          <p class="hint">Press space to start</p>
+        </section>
+
+        <section id="nw-round1">
+          <header class="nw-header">
+            <span>Round 1 / 3</span>
+            <span class="nw-timer">20:00</span>
+          </header>
+          <div class="nw-pairs">
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-red);">RED</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-yellow); color: #000;">YELLOW</div>
+            </div>
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-green);">GREEN</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-blue);">BLUE</div>
+            </div>
+          </div>
+          <hr class="nw-divider" />
+          <ul class="nw-questions" id="nw-round1-questions"></ul>
+        </section>
+
+        <section id="nw-transition1to2">
+          <header class="nw-header">
+            <span>Round 2 / 3</span>
+            <span class="nw-up-next">Up next</span>
+          </header>
+          <div class="nw-pairs">
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-red);">RED</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-green);">GREEN</div>
+            </div>
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-yellow); color: #000;">YELLOW</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-blue);">BLUE</div>
+            </div>
+          </div>
+          <p class="nw-cta">Press space to start round 2</p>
+        </section>
+
+        <section id="nw-round2">
+          <header class="nw-header">
+            <span>Round 2 / 3</span>
+            <span class="nw-timer">20:00</span>
+          </header>
+          <div class="nw-pairs">
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-red);">RED</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-green);">GREEN</div>
+            </div>
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-yellow); color: #000;">YELLOW</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-blue);">BLUE</div>
+            </div>
+          </div>
+          <hr class="nw-divider" />
+          <ul class="nw-questions" id="nw-round2-questions"></ul>
+        </section>
+
+        <section id="nw-transition2to3">
+          <header class="nw-header">
+            <span>Round 3 / 3</span>
+            <span class="nw-up-next">Up next</span>
+          </header>
+          <div class="nw-pairs">
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-red);">RED</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-blue);">BLUE</div>
+            </div>
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-yellow); color: #000;">YELLOW</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-green);">GREEN</div>
+            </div>
+          </div>
+          <p class="nw-cta">Press space to start round 3</p>
+        </section>
+
+        <section id="nw-round3">
+          <header class="nw-header">
+            <span>Round 3 / 3</span>
+            <span class="nw-timer">20:00</span>
+          </header>
+          <div class="nw-pairs">
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-red);">RED</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-blue);">BLUE</div>
+            </div>
+            <div class="nw-pair">
+              <div class="nw-block" style="background: var(--nw-yellow); color: #000;">YELLOW</div>
+              <span class="nw-vs">&harr;</span>
+              <div class="nw-block" style="background: var(--nw-green);">GREEN</div>
+            </div>
+          </div>
+          <hr class="nw-divider" />
+          <ul class="nw-questions" id="nw-round3-questions"></ul>
+        </section>
+
+        <section id="nw-done">
+          <h1 class="nw-done-headline">That's a wrap</h1>
+          <p class="nw-done-sub">Thanks for connecting</p>
+        </section>
       </div>
     </div>
 
@@ -582,9 +1272,169 @@
     var counter = document.getElementById('counter');
     var shedLogo = document.getElementById('shed-logo');
 
+    /* === Networking timer === */
+
+    var NW_TEST_MODE = new URLSearchParams(window.location.search).get('test') === '1';
+    var NW_ROUND_SECONDS = NW_TEST_MODE ? 30 : 20 * 60;
+
+    var NW_QUESTIONS = {
+      round1: [
+        "What brought you to The Shed tonight?",
+        "What are you tinkering with at the moment?",
+        "What's an AI tool you can't stop using?",
+      ],
+      round2: [
+        "What have you been wanting to build but haven't yet?",
+        "Where are you stuck, and what would unlock you?",
+        "What's an AI experiment that didn't work out, and what did you learn?",
+      ],
+      round3: [
+        "What's exciting you most about AI right now? What's worrying you?",
+        "If you had a free week to build anything, what would it be?",
+        "Who else here would you love to swap notes with?",
+      ],
+    };
+
+    var NW_PHASES = ['nw-start', 'nw-round1', 'nw-transition1to2', 'nw-round2', 'nw-transition2to3', 'nw-round3', 'nw-done'];
+    var NW_NEXT_AFTER_ROUND = {
+      'nw-round1': 'nw-transition1to2',
+      'nw-round2': 'nw-transition2to3',
+      'nw-round3': 'nw-done',
+    };
+
+    var nwState = { phase: 'nw-start', secondsRemaining: 0, tickHandle: null };
+    var nwAudioCtx = null;
+
+    (function nwRenderQuestions() {
+      ['round1', 'round2', 'round3'].forEach(function(round) {
+        var ul = document.getElementById('nw-' + round + '-questions');
+        if (!ul) return;
+        ul.innerHTML = '';
+        NW_QUESTIONS[round].forEach(function(q) {
+          var li = document.createElement('li');
+          li.textContent = q;
+          ul.appendChild(li);
+        });
+      });
+    })();
+
+    function nwShowScreen(phase) {
+      nwState.phase = phase;
+      NW_PHASES.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.classList.toggle('is-active', id === phase);
+      });
+    }
+
+    function nwFormatTime(s) {
+      var m = Math.floor(s / 60);
+      var r = s % 60;
+      return String(m).padStart(2, '0') + ':' + String(r).padStart(2, '0');
+    }
+
+    function nwUpdateTimerDisplay() {
+      var el = document.querySelector('#' + nwState.phase + ' .nw-timer');
+      if (el) el.textContent = nwFormatTime(nwState.secondsRemaining);
+    }
+
+    function nwInitAudio() {
+      try {
+        if (!nwAudioCtx) nwAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (nwAudioCtx.state === 'suspended') nwAudioCtx.resume();
+      } catch (e) { /* ignore */ }
+    }
+
+    function nwPlayBell() {
+      try {
+        if (!nwAudioCtx) return;
+        var now = nwAudioCtx.currentTime;
+        [[880, 0], [660, 0.18]].forEach(function(pair) {
+          var freq = pair[0], start = pair[1];
+          var osc = nwAudioCtx.createOscillator();
+          var gain = nwAudioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.value = freq;
+          gain.gain.setValueAtTime(0.0001, now + start);
+          gain.gain.exponentialRampToValueAtTime(0.4, now + start + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + start + 0.9);
+          osc.connect(gain).connect(nwAudioCtx.destination);
+          osc.start(now + start);
+          osc.stop(now + start + 1.0);
+        });
+      } catch (e) { /* ignore */ }
+    }
+
+    function nwEndRound(phase) {
+      if (nwState.tickHandle) {
+        clearInterval(nwState.tickHandle);
+        nwState.tickHandle = null;
+      }
+      nwPlayBell();
+      nwShowScreen(NW_NEXT_AFTER_ROUND[phase]);
+    }
+
+    function nwStartRound(phase) {
+      nwShowScreen(phase);
+      nwState.secondsRemaining = NW_ROUND_SECONDS;
+      nwUpdateTimerDisplay();
+      if (nwState.tickHandle) clearInterval(nwState.tickHandle);
+      nwState.tickHandle = setInterval(function() {
+        nwState.secondsRemaining -= 1;
+        nwUpdateTimerDisplay();
+        if (nwState.secondsRemaining <= 0) nwEndRound(phase);
+      }, 1000);
+    }
+
+    function nwReset() {
+      if (nwState.tickHandle) {
+        clearInterval(nwState.tickHandle);
+        nwState.tickHandle = null;
+      }
+      nwShowScreen('nw-start');
+    }
+
+    function nwCancel() {
+      if (nwState.tickHandle) {
+        clearInterval(nwState.tickHandle);
+        nwState.tickHandle = null;
+      }
+    }
+
+    // Returns true if space was consumed by the timer (so the deck shouldn't advance).
+    function nwHandleSpace() {
+      switch (nwState.phase) {
+        case 'nw-start':
+          nwInitAudio();
+          nwStartRound('nw-round1');
+          return true;
+        case 'nw-transition1to2':
+          nwStartRound('nw-round2');
+          return true;
+        case 'nw-transition2to3':
+          nwStartRound('nw-round3');
+          return true;
+        case 'nw-round1':
+        case 'nw-round2':
+        case 'nw-round3':
+          nwEndRound(nwState.phase);
+          return true;
+        case 'nw-done':
+        default:
+          return false;
+      }
+    }
+
+    function nwIsTimerSlide(slide) {
+      return slide && slide.id === 'networking-timer-slide';
+    }
+
+    /* === Deck navigation === */
+
     function go(n) {
       if (n < 0) n = 0;
       if (n > slides.length - 1) n = slides.length - 1;
+      var leavingTimer = nwIsTimerSlide(slides[current]);
+      var enteringTimer = nwIsTimerSlide(slides[n]);
       slides[current].classList.remove('active');
       current = n;
       slides[current].classList.add('active');
@@ -593,19 +1443,31 @@
       // Hide shed logo on MindsetOS slide (has its own branding)
       var isMindsetSlide = slides[current].querySelector('[alt="MindsetOS"]');
       shedLogo.style.display = isMindsetSlide ? 'none' : 'block';
+      if (enteringTimer && !leavingTimer) nwReset();
+      if (leavingTimer && !enteringTimer) nwCancel();
     }
 
     function next() { go(current + 1); }
     function prev() { go(current - 1); }
 
     document.addEventListener('keydown', function(e) {
-      if (e.key === 'ArrowRight' || e.key === ' ') {
+      var onTimer = nwIsTimerSlide(slides[current]);
+
+      if (e.key === ' ') {
+        e.preventDefault();
+        if (onTimer && nwHandleSpace()) return;
+        next();
+        return;
+      }
+      if (e.key === 'ArrowRight') {
         e.preventDefault();
         next();
+        return;
       }
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
         prev();
+        return;
       }
     });
 
