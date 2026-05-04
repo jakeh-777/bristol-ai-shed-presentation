@@ -263,36 +263,60 @@
       background: #fff;
       border: 1px solid #2a20170d;
       border-radius: 16px;
-      padding: 36px 32px;
+      padding: 32px 28px;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
 
     .sponsor-logo {
-      height: 72px;
+      height: 64px;
       width: auto;
       max-width: 100%;
       object-fit: contain;
-      margin-bottom: 24px;
+      align-self: flex-start;
+      margin-bottom: 20px;
     }
 
     .sponsor-tag {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1.5px;
       color: #b45309;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    .sponsor-quote {
-      font-size: 22px;
-      font-style: italic;
+    .sponsor-blurb {
+      font-size: 19px;
       color: #2a2017cc;
+      line-height: 1.45;
+      margin-bottom: 16px;
+    }
+
+    .sponsor-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .sponsor-points li {
+      font-size: 17px;
+      color: #2a201799;
       line-height: 1.4;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .sponsor-points li::before {
+      content: "·";
+      position: absolute;
+      left: 4px;
+      color: #b45309;
+      font-weight: 700;
     }
 
     .founders-grid {
@@ -715,17 +739,26 @@
       <div class="slide-inner">
         <div class="label">Founding Gold Sponsors</div>
         <h2>Thank you to <span class="accent">our sponsors</span></h2>
-        <p class="subtitle" style="margin-bottom: 8px;">They fund the events. That's what keeps them free.</p>
         <div class="sponsor-grid">
           <div class="sponsor-card">
             <img class="sponsor-logo" src="images/albert-goodman-logo.png" alt="Albert Goodman" />
             <div class="sponsor-tag">Accountancy & Advisory</div>
-            <p class="sponsor-quote">"Helping businesses prosper for over a century. Proud of our heritage and independence."</p>
+            <p class="sponsor-blurb">Independent South West firm helping businesses prosper for over a century.</p>
+            <ul class="sponsor-points">
+              <li>Accountancy, tax, financial planning and business advisory</li>
+              <li>B Corp certified, environmental and social commitments</li>
+              <li>Independent, locally owned, regionally rooted</li>
+            </ul>
           </div>
           <div class="sponsor-card">
             <img class="sponsor-logo" src="images/vwv-logo.png" alt="VWV" />
             <div class="sponsor-tag">Law</div>
-            <p class="sponsor-quote">"Through our expert team of lawyers and the partnerships we build, we put our clients at the forefront."</p>
+            <p class="sponsor-blurb">National law firm with a strong Bristol presence, working in partnership with their clients.</p>
+            <ul class="sponsor-points">
+              <li>Connected teams invested in client success</li>
+              <li>Fresh perspectives on complex challenges</li>
+              <li>Anticipating tomorrow's legal needs, not just today's</li>
+            </ul>
           </div>
         </div>
       </div>
